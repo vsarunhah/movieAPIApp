@@ -1,12 +1,14 @@
 package com.android.varun.moviesmovies.models;
 
-public class movieModel
+import java.io.Serializable;
+
+public class movieModel implements Serializable
 {
     String title, overview, backdrop_path, status, poster_path, releaseDate;
-    Integer id, genre_ids;
+    Integer id;
     Float vote_average;
 
-    public movieModel(String title, String overview, String backdrop_path, String status, String poster_path, String releaseDate, Integer id, Integer genre_ids, Float vote_average) {
+    public movieModel(String title, String overview, String backdrop_path, String status, String poster_path, String releaseDate, Integer id, Float vote_average) {
         this.title = title;
         this.overview = overview;
         this.backdrop_path = backdrop_path;
@@ -14,7 +16,6 @@ public class movieModel
         this.poster_path = poster_path;
         this.releaseDate = releaseDate;
         this.id = id;
-        this.genre_ids = genre_ids;
         this.vote_average = vote_average;
     }
 
@@ -74,13 +75,6 @@ public class movieModel
         this.id = id;
     }
 
-    public Integer getGenre_ids() {
-        return genre_ids;
-    }
-
-    public void setGenre_ids(Integer genre_ids) {
-        this.genre_ids = genre_ids;
-    }
 
     public Float getVote_average() {
         return vote_average;
